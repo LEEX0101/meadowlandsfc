@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Meadowlands FC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!--below refers to social media buttons in footer -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+  /*  color: #1c2833; /*shade of black */
+    color: white;
+  }
+
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+/*  color: #303030; */
+    color: black;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+/*  color: #303030; */
+    color: white;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  .jumbotron {
+    background-color: #1c2833;
+    color: #fff;
+	  display:inline-block;
+	  margin:0px;
+    font-family: Arial Black;
+  }
+
+  .btn {
+    position: relative;
+    background-color: black;
+    color: white;
+    border: black;
+  }
+  .imgDiv{
+	  position: relative;
+    width: 100%;
+  }
+  .btn-lg{
+    background-color: #1c2833;
+	  border-radius:5px;
+    font-family: helvetica;
+	  color:white;
+	  border: 0px solid black;
+	  position: absolute;
+	  top: 17%;
+	  left: 50%;
+	  padding:0.7%;
+	  font-size:140%;
+	  transform: translate(-50%, -17%);
+	  -ms-transform: translate(-50%, -17%);
+    opacity: 0.5;
+    transition: opacity .5s;
+  }
+  .btn-lg:hover{
+	  background-color:black;
+
+  }
+/*
+  .btn-overlay {
+    position: absolute;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    transition: opacity .5s;
+}
+
+*/
+  .container-fluid {
+    top:0px;
+    display:inline-block;
+    padding:0px;
+
+  }
+  .footer1{
+	 background:#1c2833;
+   display:inline-block;
+	 width:100%;
+
+  }
+
+
+
+/* below refer to social media buttons in footer */
+ .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  float:left;
+}
+
+  .fa:hover {
+      opacity: 0.7;
+  }
+
+  .fa-facebook {
+    color: white;
+    position: relative;
+
+  }
+  .fa-instagram {
+    color: white;
+    position: relative;
+
+  }
+
+
+/* reference to social media buttons ends */
+
+
+  .container-fluid img {
+    max-width: 150%;
+    height: auto;
+  }
+
+  .col-sm-5 {
+    color: white;
+  }
+
+  .bg-grey {
+   background-color: #f6f6f6;
+  }
+
+  .bg-black{
+   background-color:#1c2833;
+  }
+  .logo-small {
+   color: #f4511e;
+   font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+  }
+  .headerimg{
+   float:center;
+   display:inline-block;
+   width:50%;
+
+  }
+  .thumbnail {
+   padding: 0 0 15px 0;
+   border: none;
+   border-radius: 0;
+	 background-color: #f6f6f6;
+  }
+  .thumbnail img {
+   width: 100%;
+   height: 100%;
+   margin-bottom: 10px;
+	 background-color: #f6f6f6;
+  }
+  .thep {
+   color:white;
+  }
+  .item h4 {
+   font-size: 19px;
+   line-height: 1.375em;
+   font-weight: 400;
+   font-style: italic;
+   margin: 70px 0;
+  }
+  .item span {
+   font-style: normal;
+  }
+  .img-fluid{
+	 vertical-align:top;
+ 	 width:100%;
+  }
+  .panel {
+   border: 1px solid #f4511e;
+   border-radius:0 !important;
+   transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+   box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+   border: 1px solid #f4511e;
+   background-color: #fff !important;
+   color: #f4511e;
+  }
+  .panel-heading {
+   color: #fff !important;
+   background-color: #f4511e !important;
+   padding: 25px;
+   border-bottom: 1px solid transparent;
+   border-top-left-radius: 0px;
+   border-top-right-radius: 0px;
+   border-bottom-left-radius: 0px;
+   border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+	  background-color: #f6f6f6;
+   }
+  .navbar {
+    margin-bottom: 0;
+    background-color:  #1c2833;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+  /*color: #fff !important; */
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: white !important;
+    background-color: black !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font: Lato, sans-serif;
+    color: white;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+    float:right;
+
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+
+
+  }
+  </style>
+
+/* This refers to favicon */
+<link rel="icon" type="image/x-icon" href="MFClogo.jpg">
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    <a class="navbar-brand" href="#myPage"></a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+
+        <li><a href="#about">HOME</a></li>
+
+        <li><a href="#contact">CONTACT</a></li>
+      <!-- adding tryout form-->
+        <li><a href="tryoutform.html">TRY OUT</a></li>
+<!--SOCIALS LINKS-->
+        <li><a href="https://www.facebook.com/meadowlandsfcNJ/">FACEBOOK</a></li>
+        <li><a href="https://www.instagram.com/accounts/login/?next=/meadowlandsfc/">INSTAGRAM</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <img src="headerimgtrans.png" class="headerimg" >
+</div>
+
+<!-- Container (Home Section) -->
+<div id="about" class="container-fluid text-center bg-black">
+
+<!--overlay button over img -->
+<div class="imgDiv">
+<img src="MFCTeamPhoto.jpg" class="img-fluid" alt="Responsive image">
+<button type="button" class="btn-lg btn-dark" onclick="window.location='/tryoutform.html';">JOIN US FOR SUMMER LEAGUE!</button>
+</div>
+
+<p>Established in 2015 in Secaucus, New Jersey, Meadowlands FC currently competes in the Garden State Soccer League.
+   MFC fields three squads: Semi-Pro (ages 18+), Legends (ages 30+), and Women’s (ages 18+).</p>
+
+  </div>
+</div>
+
+
+<center>
+
+<footer class="footer1">
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container bg-white">
+  <br>
+
+  <a href="https://www.facebook.com/meadowlandsfcNJ/" class="fa fa-facebook"></a>
+  <a href="https://www.instagram.com/accounts/login/?next=/meadowlandsfc/" class="fa fa-instagram"></a>
+<!--<div class="col-sm-7 slideanim"> -->
+<!--<div class="col-auto slideanim"> secondary option-->
+<p>Contact Us</p>
+
+    <div class="col-sm-6 slideanim">
+        <form action="/mailer.php" method="get">
+      <div class="row">
+    <input type="hidden" name="formnum" value="1">
+    <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+    </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comment" placeholder="Comment" rows="1"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Submit</button>
+  </form>
+
+</div>
+
+
+</footer>
+
+
+</center>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+
+</body>
+</html>
